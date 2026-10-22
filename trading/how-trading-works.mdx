@@ -3,7 +3,7 @@ title: "How trading works"
 description: "Every Monofin trade in three choices: side, size, multiplier — with the tools to manage it from entry to exit."
 ---
 
-Whether it's an election market or a BTC perp, every trade on Monofin comes down to three choices. The ticket looks different for event markets and perps, but the logic is the same.
+Election market or BTC perp — every trade on Monofin is three choices. The ticket looks different for event markets and perps. The logic is the same.
 
 ## The three choices
 
@@ -12,7 +12,7 @@ Whether it's an election market or a BTC perp, every trade on Monofin comes down
     Event markets: **YES** or **NO** on the outcome. Perps: **long** (price rises) or **short** (price falls).
   </Step>
   <Step title="Size">
-    How much USDC you put behind the trade. Minimums are small enough to test a thesis before you scale it. On event markets, your size buys shares at the current price — your maximum loss is what you paid.
+    How much USDC backs the view. Minimums are small — test the thesis before you size it. On event markets, your size buys shares at the current price: your max loss is what you paid.
   </Step>
   <Step title="Multiplier (perps only)">
     Leverage, up to the market's maximum. Your collateral controls a position worth multiplier × collateral. Higher multiplier, closer liquidation price. See [Leverage, funding, and liquidations](/trading/leverage-funding-liquidations).
@@ -23,26 +23,26 @@ Whether it's an election market or a BTC perp, every trade on Monofin comes down
 
 The ticket shows everything before you commit:
 
-- **Entry price** and, for limit orders, the price you're willing to accept
-- **Estimated liquidation price** (perps) — the level where your margin runs out
+- **Entry price** — and for limit orders, the price you're willing to accept
+- **Estimated liquidation price** (perps) — where your margin runs out
 - **Itemized fees** — every fee on the trade, in dollars, not fine print
 - **A plain-English risk line** — what you can lose, stated like a human
 
-If your balance can't cover the trade, the confirm button tells you the exact shortfall — "deposit $10.72 more" — and takes you straight to funding. No dead-end error states.
+Balance short? The confirm button tells you the exact shortfall — "deposit $10.72 more" — and takes you straight to funding. No dead-end errors.
 
 ## After you're in
 
-- **Take profit / stop loss.** Attach an exit when you enter. TP/SL applies to the whole position and cancels automatically when it closes.
-- **Add or reduce.** Scale a position up or down without closing it.
-- **Close anytime.** No lock-ups, no settlement windows — 24/7, including weekends and holidays. Close one position or all of them from Portfolio.
+- **Take profit / stop loss.** Attach the exit when you enter. TP/SL covers the whole position and cancels automatically when it closes.
+- **Add or reduce.** Scale up or down without closing.
+- **Close anytime.** No lock-ups, no settlement windows — 24/7, weekends and holidays included. Close one position or all of them from Portfolio.
 
 ## Where to see it all
 
-**Portfolio** is your command center: cash balance, open positions across event markets, perps, and RWA, open orders, Earn positions, and full transaction history.
+**Portfolio** is your command center: cash balance, open positions across event markets, perps, and RWA, open orders, Earn positions, full transaction history.
 
 <CardGroup cols={2}>
   <Card title="Order types" icon="list" href="/trading/order-types">
-    Market, limit, and stop orders — when to use which.
+    Market, limit, and trigger orders — when to use which.
   </Card>
   <Card title="Fees" icon="receipt" href="/trading/fees">
     What Monofin charges, and how referrals cut it.
