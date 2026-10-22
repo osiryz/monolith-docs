@@ -1,0 +1,56 @@
+---
+title: "Leverage, funding, and liquidations"
+description: "The three mechanics behind every perpetual trade on Monofin — explained in plain English."
+---
+
+Perps are simple to place and unforgiving to misunderstand. These are the three mechanics that decide whether your trade lives or dies.
+
+## Leverage
+
+Leverage (your **multiplier**) lets a small amount of collateral control a larger position:
+
+| Collateral | Multiplier | Position size |
+|---|---|---|
+| $100 | 5x | $500 |
+| $100 | 10x | $1,000 |
+| $100 | 40x | $4,000 |
+
+Gains and losses are calculated on the **position size**, not your collateral. A 10% move against a 10x position wipes out your margin. A 10% move against a 40x position wipes it out four times over.
+
+<Warning>
+Leverage magnifies losses exactly as much as gains. Most liquidations happen to traders who sized for the win and not for the wiggle. Lower multiplier = further liquidation price = more room to be early.
+</Warning>
+
+## Margin
+
+Your **margin** is the collateral backing a position. Monofin shows your margin usage and estimated liquidation price on every ticket and every open position.
+
+- If the market moves against you, unrealized losses come out of your margin.
+- You can **add margin** to an open position to push the liquidation price further away.
+- When losses consume the margin available to the position, the position is **liquidated**.
+
+## Funding
+
+Perps never expire, so something has to keep the perp price anchored to the real market. That something is **funding**:
+
+- Periodically, one side pays the other. When funding is **positive**, longs pay shorts. When **negative**, shorts pay longs.
+- Funding is proportional to your position size and accrues while you hold.
+- The current rate and countdown are shown on every perp market page.
+
+Funding is usually small, but on crowded trades it can get expensive to be on the popular side. It's a cost (or income) of holding, not a fee to Monofin.
+
+## Liquidation
+
+Liquidation is the hard stop: when your margin can no longer cover the position's losses, the venue closes the position automatically and you lose the margin on that position.
+
+- Your **estimated liquidation price** is shown before you confirm every trade — and on every open position.
+- Liquidation is a function of entry price, multiplier, and margin. Change any of the three and the liquidation price moves.
+- **Stop losses trigger before liquidation** when set sensibly — that's what they're for.
+
+<Note>
+Liquidation applies to leveraged perp positions. Event-market shares can't be liquidated — the most you can lose is what you paid for the shares. See [Event markets](/markets/event-markets).
+</Note>
+
+## The one-paragraph version
+
+Pick a multiplier you can survive being wrong on. Know your liquidation price before you confirm. Watch funding if you're holding for days, not minutes. Set a stop loss like you mean it.

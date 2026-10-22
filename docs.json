@@ -1,0 +1,107 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "aspen",
+  "name": "Monofin",
+  "description": "Monofin documentation — every market that matters, one balance, and the best traders in public.",
+  "colors": {
+    "primary": "#C9F73A",
+    "light": "#4A6E00",
+    "dark": "#C9F73A"
+  },
+  "appearance": {
+    "default": "dark",
+    "strict": false
+  },
+  "background": {
+    "color": {
+      "dark": "#0E0E0C",
+      "light": "#F5F2EA"
+    }
+  },
+  "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
+    "href": "https://docs.monofin.xyz"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Docs",
+        "groups": [
+          {
+            "group": "About Monofin",
+            "pages": [
+              "about-monofin/what-is-monofin",
+              "about-monofin/quickstart",
+              "about-monofin/funding-your-account"
+            ]
+          },
+          {
+            "group": "Markets",
+            "pages": [
+              "markets/overview",
+              "markets/event-markets",
+              "markets/perpetual-futures",
+              "markets/real-world-assets"
+            ]
+          },
+          {
+            "group": "Trading",
+            "pages": [
+              "trading/how-trading-works",
+              "trading/order-types",
+              "trading/leverage-funding-liquidations",
+              "trading/fees"
+            ]
+          },
+          {
+            "group": "Social",
+            "pages": [
+              "social/leaderboard",
+              "social/profiles-and-feed",
+              "social/chat",
+              "social/referrals"
+            ]
+          },
+          {
+            "group": "Earn",
+            "pages": [
+              "earn/what-is-monofin-earn",
+              "earn/risk-tiers"
+            ]
+          },
+          {
+            "group": "Account",
+            "pages": [
+              "account/wallet-and-security",
+              "account/availability",
+              "faq"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "mailto:support@monofin.xyz"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Launch app",
+      "href": "https://app.monofin.xyz"
+    }
+  },
+  "footer": {
+    "socials": {}
+  },
+  "seo": {
+    "metatags": {
+      "og:site_name": "Monofin Docs"
+    }
+  }
+}

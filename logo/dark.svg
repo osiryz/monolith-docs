@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48">
+  <rect x="4" y="8" width="30" height="34" rx="4" fill="#232119"/>
+  <rect x="17" y="8" width="4" height="34" fill="#C9F73A"/>
+  <text x="46" y="33" font-family="Inter, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#F5F2EA" letter-spacing="0.5">monofin</text>
+</svg>

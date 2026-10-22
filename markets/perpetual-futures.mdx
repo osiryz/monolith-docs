@@ -1,0 +1,47 @@
+---
+title: "Perpetual futures"
+description: "Long or short crypto perpetuals with leverage on Monofin — 24/7, no expiry, instant settlement."
+---
+
+Perpetual futures ("perps") let you trade the price of an asset — up or down — without owning it. Monofin's perps run on Hyperliquid's deep on-chain liquidity, so you get tight spreads and instant settlement, 24/7/365.
+
+## What you can trade
+
+- **Majors** — BTC, ETH, and other large-caps with the deepest books
+- **Altcoins** — HYPE and a rotating set of high-volume altcoin markets
+- New perp markets are listed as venue liquidity supports them
+
+## How perps work
+
+A perp tracks the price of the underlying asset. There are **no expiry dates, no lock-ups, and no settlement periods** — open or close in seconds, including nights, weekends, and holidays when traditional exchanges are closed.
+
+Every perp trade is three choices:
+
+1. **Direction.** Think the price rises? Go long. Think it falls? Go short.
+2. **Size.** How much collateral to put behind the trade.
+3. **Multiplier.** Leverage up to the market's maximum — up to **40x** on major markets. $100 at 10x controls a $1,000 position. Multipliers magnify losses as well as gains.
+
+## The three mechanics to understand
+
+<AccordionGroup>
+  <Accordion title="Margin — what backs your position">
+    Your collateral (margin) backs the position. If the market moves against you and your margin can't cover the loss, the position is liquidated. You can add margin to a position to move your liquidation price further away. See [Leverage, funding, and liquidations](/trading/leverage-funding-liquidations).
+  </Accordion>
+  <Accordion title="Funding — the anchor to spot price">
+    Perps have no expiry, so periodic funding payments between longs and shorts keep the perp price anchored to the underlying market. When funding is positive, longs pay shorts; when negative, shorts pay longs. The current funding rate is shown on every market page.
+  </Accordion>
+  <Accordion title="Liquidation — the hard stop">
+    If your position's losses eat through your margin, it's liquidated automatically and you lose the margin on that position. Your estimated liquidation price is always shown on the trade ticket **before** you confirm — never a surprise.
+  </Accordion>
+</AccordionGroup>
+
+## Tools on every ticket
+
+- **Market and limit orders** — see [Order types](/trading/order-types)
+- **Take profit / stop loss** attached to the position from the start
+- **Estimated liquidation price and itemized fees** before you confirm
+- **Plain-English risk disclosure** at the bottom of every ticket
+
+<Warning>
+Perps with leverage are high-risk instruments. Liquidation can happen fast in volatile markets, and you can lose the entire margin on a position. Never trade with funds you can't afford to lose.
+</Warning>
