@@ -7,13 +7,23 @@ No hidden fees. No fine print. Every cost on Monofin is itemized on the order ti
 
 ## Trading fees
 
-| Market type | What you pay |
-|---|---|
-| **Perpetuals** | The venue's base trading fee plus a small Monofin builder fee on each fill |
-| **Event markets** | A trading fee on each fill, shown on the ticket |
-| **Real-world assets** | Venue fee plus builder fee — same structure as perps |
+| Market type | Venue fee | Monofin builder fee |
+|---|---|---|
+| **Perpetuals** | Set by the underlying venue, varies by market | **0.05%** of position size per fill |
+| **Event markets** | Set by the venue, varies by market | Small percentage per fill, shown on the ticket |
+| **Real-world assets** | Set by the deployer/venue | Same structure as perps |
 
-The builder fee is how Monofin makes money: a small percentage of each trade, competitive with other frontends on the same venues, always shown as its own line on your ticket.
+The builder fee is how Monofin makes money: it keeps the routing, the apps, and the social layer running. It's competitive with other frontends on the same venues, and it's always its own line on your ticket — never blended, never buried.
+
+### A worked example
+
+You open a **$1,000 BTC perp position**:
+
+- Monofin builder fee: $1,000 × 0.05% = **$0.50**
+- Venue fee: shown on the ticket at the venue's current rate
+- **Total cost: exact dollar amounts, itemized, before you confirm.**
+
+Closing the position is another fill — same structure. On event markets, the fee is calculated on the shares you buy or sell and shown the same way.
 
 ## Funding is not a fee
 

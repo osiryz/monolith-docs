@@ -1,0 +1,59 @@
+---
+title: "Risk disclosure"
+description: "The honest version: liquidation math, resolution risk, vault risk, and everything else that can go wrong — in plain English."
+---
+
+Trading on Monofin involves real risk of loss. This page is the unvarnished version — read it before you deposit. Nothing on Monofin is investment advice, and no balance on Monofin is insured.
+
+<Warning>
+**The short version:** Leveraged perps can liquidate you in minutes. Event-market shares can go to zero. Earn vaults can lose money. Crypto transfers are final. Never trade with funds you can't afford to lose.
+</Warning>
+
+## Perpetual futures risk
+
+### Liquidation, with the math
+
+You open a **10x long** on BTC at $100,000 with $100 collateral — a $1,000 position.
+
+- BTC falls to ~$90,500: your position is down ~9.5%, your $100 margin is nearly gone, and the position is **liquidated**. You lose the $100.
+- At **40x**, the same wipeout takes a move of roughly 2.5%.
+- The liquidation price on your ticket is an **estimate**. In fast markets, liquidation can fill worse than the estimate — fees and funding nudge it closer over time.
+
+### Funding drag
+
+Hold a leveraged position for days and funding accrues against you or for you, depending on the rate. On crowded trades, funding can meaningfully erode a winning position. It's shown on every market page — look at it before you hold, not after.
+
+### Leverage cuts both ways
+
+Gains and losses are calculated on position size, not collateral. See [Leverage, funding, and liquidations](/trading/leverage-funding-liquidations) for the full mechanics.
+
+## Event market risk
+
+- **Shares can expire worthless.** Buy YES at 70¢ and the outcome doesn't happen: those shares pay $0. The entire stake is gone.
+- **Resolution risk.** Outcomes are decided by the market's resolution source under its written rules. Edge cases resolve by the letter of the rules, not by what feels fair. Read the resolution panel before you trade.
+- **Liquidity risk.** Thin books mean slippage — you may not be able to exit at the displayed price, or at all, before resolution.
+- **Price is the market's opinion, not truth.** A 90¢ favorite still loses roughly one time in ten.
+
+## Real-world asset risk
+
+- **Off-hours pricing.** RWA markets trade 24/7, but the underlying reference markets close. Spreads widen and pricing confidence drops outside traditional hours.
+- **Derivatives, not ownership.** No dividends, no voting rights, no claim on the underlying asset.
+- **Deployer and venue risk.** RWA instruments are issued by third-party on-chain deployers; their mechanisms and oracles carry their own risks.
+
+## Earn vault risk
+
+- **Smart-contract risk.** Vaults are code. Exploits happen across DeFi, in every risk tier, including Tier 1.
+- **Curator and strategy risk.** Tier 2 and 3 vaults depend on the humans and strategies running them.
+- **Variable yield.** Advertised rates are indicative, never guaranteed. Rates fall as well as rise.
+- **Not insured.** No deposit insurance, no guarantees, no bailouts. Losses are possible in every vault. See [Earn risk tiers](/earn/risk-tiers).
+
+## Platform risk
+
+- **You're your own backup.** Monofin is non-custodial: only you can sign transactions. That protects you from us — it also means your account access is your responsibility. See [Wallet and security](/account/wallet-and-security).
+- **Venue outages.** Monofin routes to third-party venues. A venue outage can delay execution, funding, or settlement.
+- **Transfers are final.** A withdrawal to a wrong address is gone. Verify address and network every time.
+- **Jurisdiction changes.** Available markets follow your jurisdiction and can change as rules evolve. See [Availability](/account/availability).
+
+## The one rule above all
+
+Size every position as if it goes to zero — because on a long enough timeline, some of them will.

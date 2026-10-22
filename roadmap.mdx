@@ -51,7 +51,7 @@ Activity that counts, counted:
 
 - Earn points for trading, referring, showing up — the actions that make Monofin better
 - A rewards hub to track your balance and streaks
-- Leaderboard-adjacent, so the grinders are public too
+- Designed to reward consistent, genuine activity — not mercenary volume
 
 What points become is intentionally unsaid for now. Early activity is on the record.
 
@@ -60,17 +60,42 @@ What points become is intentionally unsaid for now. Early activity is on the rec
 Beyond following a trader's feed: allocate to their actual strategy.
 
 - **Funds run by proven Monofin traders** — allocate USDC, mirror their entries and exits proportionally
+- **Configurable copying** — set your allocation size, filter by market category, cap your max drawdown, and choose whether to mirror instantly or with a delay
 - **Receipts first** — every fund's track record is public leaderboard history, not a pitch deck
 - **Your money, your custody** — non-custodial allocation, withdraw per each fund's terms
 - **Not Earn** — Earn vaults are DeFi yield from lending. Funds are active trading strategies with active trading risk. Different animal, labeled differently
 
-### Calibration score
+### Calibration scores and smarter discovery
 
-PnL tells you who got rich. Calibration tells you who's actually right. When a trader says 70%, does it happen 70% of the time? A prediction-native credibility metric nobody else measures — the natural evolution of the leaderboard.
+PnL tells you who got rich. Calibration tells you who's actually right. Raw PnL leaderboards crown hot streaks; we're building the metrics that surface skill:
+
+- **Calibration score** — when a trader says 70%, does it happen 70% of the time? A prediction-native credibility metric nobody else measures
+- **Discovery filters beyond PnL** — consistency across multiple windows, win rate by category, risk-adjusted returns, drawdown history
+- The goal: find the traders worth following before the crowd does — and avoid the ones one lucky week made famous
+
+### Portfolio intelligence
+
+One balance means your risks can interact in non-obvious ways. A unified portfolio view that shows you the whole picture:
+
+- **Cross-market exposure** — your election YES, your BTC long, and your gold position in one risk view
+- **Margin usage across positions** — total leverage, not per-position tunnel vision
+- **Correlation flags** — when your "diversified" positions are secretly the same bet
+
+### Execution transparency
+
+Aggregation only wins if fills stay honest — so we show the receipts:
+
+- **Fill quality stats** — average slippage versus venue mid, fill rates, routing outcomes
+- **Routing logic in the open** — how orders get routed across venues, and why
+- If going direct ever beats us on execution, you should be able to see it. That's the point of publishing it
 
 ### Signal board
 
 Cross-venue analytics no single-venue app can build: divergences between prediction venues, mispriced mirrors of the same event, spread histories. When two venues disagree on the same outcome, one of them is wrong — that gap is the product.
+
+### Learn
+
+Two audiences land on Monofin: casual event-market traders and leveraged perp veterans. Each deserves an education layer built for the other one's world — event-market mechanics for perp traders, leverage and liquidation math for first-time forecasters. In-product, in the docs, in plain English.
 
 ### US launch
 
