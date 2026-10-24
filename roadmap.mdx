@@ -67,6 +67,16 @@ Beyond following a trader's feed: allocate to their actual strategy.
 - **Your money, your custody** — non-custodial allocation, withdraw per each fund's terms
 - **Not Earn** — Earn vaults are DeFi yield from lending. Funds are active trading strategies with active trading risk. Different animal, labeled differently
 
+### Turbo mode — 1000x, fees only when you win
+
+A different fee shape for high-leverage trades, proven by products like Rollbit and Papertrade:
+
+- **Win-only fees** — nothing to open, nothing to close, nothing on a loss. Winners share a cut of the profit. Lose? The loss is all you pay
+- **Synthetic execution** — trades settle at oracle mid prices against on-chain liquidity: no order book, no spread, no slippage, no funding
+- **Venue-routed, not house-booked** — we're exploring routing to existing synthetic venues rather than running our own LP. Monofin stays the frontend, never the counterparty
+- **Its own lane** — separate ticket, stake-capped sizing, and its own stats. Turbo results never touch leaderboard PnL or calibration
+- **Hard gates** — aggressive jurisdiction gating and a risk flow built for what 1000x actually is. This ships only if it can be done as trading, not gambling
+
 ### Smarter discovery
 
 Calibration badges shipped in v1.0. The next step is depth:
