@@ -81,6 +81,12 @@
               "account/risk",
               "faq"
             ]
+          },
+          {
+            "group": "Developers",
+            "pages": [
+              "developers/contract-addresses"
+            ]
           }
         ]
       }

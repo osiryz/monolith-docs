@@ -1,0 +1,65 @@
+---
+title: "Contract addresses"
+description: "Every on-chain contract Monofin touches — collateral, venue infrastructure, and Monofin-owned contracts — with block explorer links."
+---
+
+Monofin is a **non-custodial frontend**. Most of what your wallet signs goes to venue contracts, not Monofin contracts. This page lists all of them, so you can verify exactly what you're approving before you sign.
+
+## Monofin contracts
+
+Monofin owns **no contracts that hold user funds** today. Perps settle on Hyperliquid, event markets settle on the underlying prediction-market venue, and Earn deposits go directly from your wallet to third-party vault contracts.
+
+If Monofin ever deploys its own contracts (for example, Earn wrappers or on-chain referral accounting), they will be:
+
+1. Audited, with the report linked here.
+2. Published on this page **before** any user funds can touch them.
+3. Owned by a timelock behind a multisig — no instant admin actions.
+
+## Collateral — USDC
+
+Everything on Monofin settles in USDC. The canonical deployments you'll interact with:
+
+| Chain | Chain ID | Address |
+|---|---|---|
+| Arbitrum One | 42161 | `0xaf88d065e77c8cC2239327C5EDb3A432268e5831` |
+| HyperEVM | 999 | `0xb88339CB7199b77E23DB6E890353E22632Ba630f` |
+| Ethereum | 1 | `0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48` |
+| Base | 8453 | `0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913` |
+| Solana | — | `EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v` |
+
+The full, always-current list of official USDC deployments lives in [Circle's documentation](https://developers.circle.com/stablecoins/usdc-contract-addresses). If an address isn't there or here, it isn't USDC.
+
+## Perpetuals and real-world assets — Hyperliquid
+
+Perps and RWA markets run on Hyperliquid. There is **no exchange contract to call**: orders are signed actions on HyperCore, Hyperliquid's L1. Monofin's builder fee attaches through a Hyperliquid builder code, which you approve once from your wallet — you can revoke it anytime.
+
+| Contract | Chain | Address |
+|---|---|---|
+| Deposit bridge (Bridge2) | Arbitrum One | `0x2Df1c51E09aECF9cacB7bc98cB1742757f163dF7` |
+| USDC (HyperEVM) | HyperEVM | `0xb88339CB7199b77E23DB6E890353E22632Ba630f` |
+
+<Warning>
+The minimum deposit to the Hyperliquid bridge is **5 USDC**. Smaller transfers are not credited and cannot be recovered. Deposits from other chains route through Circle CCTP — the app handles this for you.
+</Warning>
+
+Full venue reference: [Hyperliquid docs](https://hyperliquid.gitbook.io/hyperliquid-docs).
+
+## Event markets — Polygon
+
+Event markets settle through the underlying prediction-market venue's conditional-token stack on Polygon (chain ID 137):
+
+| Contract | Address |
+|---|---|
+| ConditionalTokens (CTF) | `0x4D97DCd97eC945f40cF65F87097ACe5EA0476045` |
+| CTF Exchange | `0x4bFb41d5B3570DeFd03C39a9A4D8dE6Bd8B8982E` |
+| Neg Risk Exchange | `0xC5d563A36AE78145C45a50134d48A1215220f80a` |
+| Neg Risk Adapter | `0xd91E80cF2E7be2e162c6513ceD06f1dD0dA35296` |
+| Collateral (USDC.e) | `0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174` |
+
+Orders are EIP-712 signed messages matched off-chain and settled atomically on-chain — the venue never takes custody of your balance either.
+
+## Verify before you sign
+
+- Every address on this page is also published in the venue's own documentation. Cross-check before approving anything.
+- Monofin will never DM you an address. If a "new contract" appears anywhere except this page, treat it as hostile.
+- Questions about an approval your wallet is asking for? Email **support@monofin.xyz** before you sign.
