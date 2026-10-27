@@ -1,39 +1,81 @@
 ---
 title: "Roadmap"
-description: "Where Monofin is headed — what's live, what's building, and what we're exploring next."
+description: "Where Monofin is headed — what's live, the version roadmap ahead, and what we're exploring next."
 ---
 
-Monofin ships in public. This page is the honest version of where the product is going: what's live today, what's actively building, and what we're exploring. No dates — priorities follow what traders actually use, and everything here can move. What just shipped: the [Changelog](/changelog).
+Monofin ships in public. This page is the honest version of where the product is going: what's live today, the version roadmap ahead, and what we're exploring. No dates — priorities follow what traders actually use, and everything here can move. What just shipped: the [Changelog](/changelog).
 
 <Note>
-Everything under "Building" and "Exploring" is forward-looking. Scope, timing, and sequencing change. Nothing on this page is a commitment, and none of it is financial advice.
+Everything under "Version roadmap" and "Exploring" is forward-looking. Version numbers are indicative, not committed — scope, timing, and sequencing change. Nothing on this page is a commitment, and none of it is financial advice.
 </Note>
 
 ## Live now
 
-The foundation, shipped in v1.0: every market that matters, one balance, the best traders in public.
+The foundation, shipped from v1.0 through v1.9: every market that matters, one balance, the best traders in public.
 
 - **Event markets, perps, and real-world assets** on one home board
-- **Perps trading terminal** — live prices, order book, candles, pro ticket, positions
+- **Perps trading terminal** — live prices, order book, candles, pro ticket, positions, and customizable desk layouts
 - **Non-custodial embedded wallet** — one USDC balance across everything
+- **Full market discovery** — native markets, builder-deployed perps (HIP-3), and outcome markets (HIP-4), with categories and watchlists
 - **Leaderboard with calibration badges and Rising Stars** — real positions, real PnL, real receipts
 - **Signal** — the live feed with theses and a research rail (web-first)
+- **Trader profiles and copy positions** — detailed on-chain track records; mirror a position with review-and-confirm
+- **Monofin Earn** — curated, non-custodial yield vaults with live yield tracking (yields are variable, never guaranteed)
+- **Character program** — your avatar grows with lifetime points; spend points in the gear shop on real perks like fee discounts
+- **Real numbers only** — portfolio PnL from the real ledger, history and CSV export, no demo balances
 - **Market discussion threads** — sharp talk under every market, next to the ticket
 - **Referrals** — 10% off for friends, 25% lifetime fee share for you
-- **Watchlist with price alerts** and shareable market pages
 
-## Building
+## Version roadmap
 
-In active development, shipping when it's ready.
+What's next, version by version. Numbers and scope can move — this is the current plan of record.
 
-- **Signal and chat on mobile** — the feed and trollbox are live on web; the native apps get them next
-- **Monofin Earn** — curated, non-custodial yield vaults in three risk tiers for idle USDC; tiers render in preview while vault integrations finalize. See [What is Monofin Earn?](/earn/what-is-monofin-earn)
-- **Follow graph, deeper** — richer profiles and smarter follow suggestions from leaderboard and calibration data
-- **iOS and Android release** — the apps are in beta; store rollout follows beta
+### v1.10 — Your desk, your layout
+
+- **Detachable workspaces** — pop the terminal, prediction, and portfolio panels out into their own windows
+- **Categorized navigation** — Predict by category, Perps by symbol
+- **Earn hardening** — stronger deposit verification and verified withdrawals
+
+### v1.11 — Mobile, for real
+
+- **iOS and Android general release** — out of beta, into the stores
+- **Signal and chat on mobile** — the feed and trollbox, native
+- Push alerts on fills, liquidations, and the markets you watch; biometric lock
+
+### v1.12 — Outcome trading on HyperCore
+
+- **HIP-4 outcome markets become tradable** — discovery shipped in v1.9; trading is next
+- Fully collateralized, $0–$1 contracts settling on the same stack as perps — one margin system, one balance
+- Event-market exposure without leaving the Monofin wallet
+
+### v1.13 — Auto-copy
+
+From manual copy positions to real follow-through:
+
+- **Follow a trader with automatic mirroring** — their entries and exits, proportionally sized to your allocation
+- **Your rules** — allocation caps, category filters, max-drawdown stops, instant or delayed mirroring
+- Built on public track records: calibration and consistency, not one hot week
+
+### v1.14 — One balance, truly
+
+- **Deposit USDC from any supported chain** — QR and multi-chain deposits already live; this adds the routing brain behind them
+- **Auto-routing at trade time** — funds move to the right venue when you trade, in one confirmation. You never think about chains
+- Same non-custodial architecture throughout — your wallet signs, always
+
+### v1.15 — Earn, deeper
+
+- **Tier 3 unlocks** — behind the risk quiz, as it should be
+- More curators and vaults across the tiers
+- Richer yield reporting and vault terms in-line
+
+### v2.0 — The US product
+
+- **Regulated event markets for US users** — built on regulated prediction-market infrastructure, off the waitlist
+- The biggest market we can't serve yet, and the one with the most defined path. See [Availability](/account/availability)
 
 ## Exploring
 
-The pipeline. These are the directions we're seriously investigating — some will ship, some will change shape, some will die in review.
+The pipeline beyond the roadmap. These are the directions we're seriously investigating — some will ship, some will change shape, some will die in review.
 
 ### Monofin AI — your research desk
 
@@ -47,22 +89,22 @@ An AI analyst built into the app, trained on the markets Monofin lists:
 
 Research, not advice. The models inform; they don't promise.
 
-### Points program
+### Points, seasons, and the character program
 
-Activity that counts, counted:
+The character program is live. What comes next:
 
-- Earn points for trading, referring, showing up — the actions that make Monofin better
-- A rewards hub to track your balance and streaks
+- **Seasons** — time-boxed point races with their own rewards and standings
+- **More gear, more perks** — the shop grows with the program
 - Designed to reward consistent, genuine activity — not mercenary volume
 
-What points become is intentionally unsaid for now. Early activity is on the record.
+What points become long-term is intentionally unsaid for now. Early activity is on the record.
 
 ### Trader funds — copy trading, sized properly
 
-Beyond following a trader's feed: allocate to their actual strategy.
+Beyond auto-copy: allocate to a trader's actual strategy as a fund.
 
 - **Funds run by proven Monofin traders** — allocate USDC, mirror their entries and exits proportionally
-- **Configurable copying** — set your allocation size, filter by market category, cap your max drawdown, and choose whether to mirror instantly or with a delay
+- **Configurable allocation** — size, category filters, drawdown caps, instant or delayed
 - **Receipts first** — every fund's track record is public leaderboard history, calibration included — not a pitch deck
 - **Your money, your custody** — non-custodial allocation, withdraw per each fund's terms
 - **Not Earn** — Earn vaults are DeFi yield from lending. Funds are active trading strategies with active trading risk. Different animal, labeled differently
@@ -107,10 +149,6 @@ Cross-venue analytics no single-venue app can build: divergences between predict
 ### Learn
 
 Two audiences land on Monofin: casual event-market traders and leveraged perp veterans. Each deserves an education layer built for the other one's world — event-market mechanics for perp traders, leverage and liquidation math for first-time forecasters. In-product, in the docs, in plain English.
-
-### US launch
-
-A United States product built on regulated prediction-market infrastructure. The biggest market we can't serve yet, and the one with the most defined path. In the US? The waitlist is open — see [Availability](/account/availability).
 
 ### Leagues
 
